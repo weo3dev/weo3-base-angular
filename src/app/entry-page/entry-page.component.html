@@ -1,0 +1,12 @@
+<section class="log-entry">
+  <div class="weo3-loading" *ngIf="!pagedata">
+    <img src="assets/images/weo3-loading.gif">
+    <p>retrieving log entry</p>
+  </div>
+  <div class="content-centered" *ngIf="pagedata">
+  <h2 [innerHTML]="pagedata.title.rendered"></h2>
+  <p class="entry-date">{{pagedata.date | date: 'mediumDate'}}</p>
+  <p class="entry-content" [innerHTML]="pagedata.content.rendered"></p>
+  <hr/>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+<a class="entry-listing" [routerLink]="['/log', entry.slug]">
+<div class="entry-container">
+  <span class="title-and-date">
+    <h3 [innerHTML]="entry.title.rendered"></h3>
+    <p class="entry-date">{{entry.date | date: 'mediumDate'}}</p>
+  </span>
+  <p class="entry-excerpt" [innerHTML]="entry.excerpt.rendered | TextExcerpt : 160"></p>
+  <!-- <a class="entry-link" [routerLink]="['/log', entry.slug]">continue reading </a> -->
+</div>
+</a>

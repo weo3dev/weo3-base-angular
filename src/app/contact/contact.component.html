@@ -1,0 +1,152 @@
+<section class="contact">
+
+  <div class="beer-call">
+    <p *ngIf="!clientSubmitted">help me buy more beer.</p>
+    <p *ngIf="clientSubmitted && client.valid">CHEERS!</p>
+  </div>
+
+
+  <form novalidate [formGroup]="client" (ngSubmit)="connectMe()">
+
+    <ng-container *ngIf="!clientSubmitted">
+
+      <p>Yes, I love beer but I also love asking a lot of questions up front, which usually enables a more efficient use of our time. Hence, the connection form below, with pretty blanks and buttons and sliders, <em>oh my!</em></p>
+      <p>This should only take a few minutes for you to complete, helping me to identify your needs for the project. After sending, you will recieve an estimate from me within 48 hours.</p>
+      <p><br/></p>
+
+      <fieldset>
+            <legend>About you</legend>
+
+        <div class="input-field" >
+          <input type="text" id="fullname" formControlName="fullname">
+          <label for="fullname">Full Name</label>
+          <div class="error" *ngIf="client.get('fullname').hasError('required') && client.get('fullname').touched">
+            Name is required.
+          </div>
+          <div class="error" *ngIf="client.get('fullname').hasError('minlength') && client.get('fullname').touched">
+            Name must be a minimum of 2 letters in length.
+          </div>
+            </div>
+
+        <div class="input-field">
+          <input type="text" id="email" formControlName="email">
+          <label for="email">Email</label>
+          <div class="error" *ngIf="client.get('email').hasError('required') && client.get('email').touched">
+            Email is required.
+          </div>
+            </div>
+
+        <div class="input-field">
+              <input type="text" id="website" formControlName="website">
+              <label for="website">Website (when applicable)</label>
+            </div>
+        </fieldset>
+
+      <fieldset>
+        <legend>About your project</legend>
+        <label class="prompter">What can I help you with?</label>
+          <p><input type="radio" formControlName="pcategory" id="category1" value="design" class="with-gap">
+            <label for="category1">web design</label>
+          </p>
+          <p><input type="radio" formControlName="pcategory" id="category2" value="development" class="with-gap" [checked]="client.value['pcategory'] == development">
+            <label for="category2">web development</label>
+          </p>
+          <p><input type="radio" formControlName="pcategory" id="category3" value="design and development" class="with-gap">
+            <label for="category3">both</label>
+          </p>
+          <div class="error" *ngIf="client.get('pcategory').hasError('required') && client.get('pcategory').touched">
+            Category is required.
+          </div>
+        <p></p>
+        <label class="prompter">Is this a new project or a redesign for an existing site/brand?</label><br/>
+          <p><input type="radio" formControlName="pstatus" id="status1" value="new" class="with-gap"><label for="status1"><em>NEW!</em></label></p>
+          <p><input type="radio" formControlName="pstatus" id="status2" value="rebuild" class="with-gap" [checked]="client.value['pstatus'] == rebuild"><label for="status2">rebuild</label></p>
+          <div class="error" *ngIf="client.get('pstatus').hasError('required') && client.get('pstatus').touched">
+            Status is required.
+          </div>
+      </fieldset>
+
+<!-- 			<fieldset>
+        <legend>Project begin date</legend>
+        <label class="prompter">When do you need to start?</label>
+        <nouislider id="slider_startdate" class="noUi-extended" [min]="0" [max]="5" [step]="1" formControlName="startdate"></nouislider>
+        <nouislider id="slider_startdate" class="noUi-extended"></nouislider>
+      </fieldset>		 -->
+
+<!--
+      <fieldset>
+        <legend>Project begin date</legend>
+        <label class="prompter">When do you need to start?</label>
+        <!-- <nouislider class="noUi-extended" [min]="0" [max]="5" [step]="1" ></nouislider> -->
+
+  <!-- <nouislider [min]="0" [max]="6" [step]="0.5" [(ngModel)]="startMessage" [formControl]="connectForm.controls.startdate"></nouislider>
+
+        <!-- <nouislider [connect]="true" [min]="0" [max]="15" [(ngModel)]="someRange"></nouislider> -->
+
+
+        <!-- <nouislider class="noUi-extended" [min]="0" [max]="5" [step]="1" [formControl]="connectForm.controls.startdate"></nouislider> -->
+
+<!--				<p>{{ startMessage }}</p>
+      </fieldset>
+
+      <fieldset class="timeframe">
+        <legend>Your timeframe</legend>
+        <label class="prompter">How much time does this project have to be completed?</label>
+        <nouislider class="noUi-extended" [(ngModel)]="timeMessage" [connect]="true" [min]="0" [max]="6" [step]="1" [formControl]="connectForm.controls.timeRange" ></nouislider>
+        <p>{{ timeMessage }}</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your budget</legend>
+        <nouislider class="noUi-extended" [(ngModel)]="budgetMessage" [connect]="true" [min]="0" [max]="20000" [step]="500" [formControl]="connectForm.controls.budgetRange"></nouislider>
+        <p>{{ budgetMessage }}</p>
+      </fieldset>
+
+      -->
+
+      <fieldset>
+        <legend>Your project purpose/audience</legend>
+            <div class="input-field">
+          <textarea formControlName="purpose" id="project_purpose" class="materialize-textarea"></textarea>
+                <label for="project_purpose">What will this project do, and for whom?</label>
+              <div class="error" *ngIf="client.get('purpose').hasError('required') && client.get('purpose').touched">
+            General purpose, however short, is required.
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your our primary goal(s) for this project</legend>
+            <div class="input-field">
+          <textarea  formControlName="goal" id="primary_goal" class="materialize-textarea"></textarea>
+                <label for="primary_goal">Goals, direction, markers...</label>
+              <div class="error" *ngIf="client.get('goal').hasError('required') && client.get('goal').touched">
+            Please list at least one goal.
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Notes</legend>
+            <div class="input-field">
+          <textarea  formControlName="notes" id="additional_info" class="materialize-textarea"></textarea>
+                <label for="additional_info">Any additional relevant information</label>
+        </div>
+      </fieldset>
+
+      <button class="btn-flat" type="submit" [disabled]="client.invalid">Submit
+        <i class="material-icons right">send</i>
+      </button>
+
+    </ng-container>
+
+    <p *ngIf="client.valid && clientSubmitted" class="thanks">
+      <span class="lgft">Thank you, {{ client.value['fullname'] }}!</span><br/>
+      You will hear from me within 48 hours.
+    </p>
+
+
+  </form>
+
+</section>
+
