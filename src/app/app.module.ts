@@ -27,7 +27,7 @@ const logEntryTitle = 'WEO3 Dev & Design :: ';
 
 const ROUTES = [
   { path: '', redirectTo: 'work', pathMatch: 'full', data: { pageTitle: defaultTitle, pageHeader: ''} },
-  { path: 'work', component: WorkComponent, data: { pageTitle: defaultTitle + ' : Recent Work', pageHeader: 'Recent Work'} },
+  { path: 'work', component: WorkComponent, data: { pageTitle: defaultTitle + ' : Portfolio', pageHeader: 'Portfolio'} },
   { path: 'about', component: AboutComponent, data: { pageTitle: defaultTitle + ' : About Me', pageHeader: 'About Me'} },
   { path: 'contact', component: ContactComponent, data: { pageTitle: defaultTitle + ' : Contact Me', pageHeader: 'Contact Me'} },
   { path: 'experience', component: ExperienceComponent, data: { pageTitle: defaultTitle + ' : Experience', pageHeader: 'Experience'} },
