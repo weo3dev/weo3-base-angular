@@ -3,7 +3,7 @@
     <img src="assets/images/weo3-loading.gif">
     <p>fetching log entries</p>
   </div>
-  <ul *ngIf="entries">
+  <ul class="entries-list" *ngIf="entries">
     <li *ngFor="let entry of entries">
       <entry-listing [entry]="entry"></entry-listing>
     </li>

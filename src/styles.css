@@ -237,10 +237,33 @@ a[href].project-link:after {
   margin-top: 30vh;
 }
 
-section.logbook li {
-  margin-bottom: 1em;
-}
 
+.entries-list {
+  display: grid;
+  grid-gap: 1rem;
+}
+/* no grid support? */
+.entries-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.entries-list {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-auto-rows: 1fr;
+}
+@supports (display: grid) {
+  .entries-list > * {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+entry-listing {
+  display: flex;
+  flex: 1 1 auto;
+}
 .log-entry hr {
   overflow: visible;
   padding: 0;
@@ -660,7 +683,7 @@ nouislider {
   }
 
   section {
-    width: 65vw;
+    width: 85vw;
   }
 
   .work {
@@ -705,7 +728,7 @@ nouislider {
 /* 1200px */
 @media only screen and (min-width: 75em) {
   section {
-    width: 55vw;
+    width: 70vw;
   }
 }
 /* 1800px */
