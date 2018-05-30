@@ -156,7 +156,7 @@ section {
 .project-list {
   display: grid;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: minmax(420px, auto);
 }
 
@@ -618,7 +618,12 @@ nouislider {
   breakpoints revised: 5/29/2018
 ****************************************/
 
-
+/* 400px */
+@media only screen and (min-width: 26em) {
+  .project-list {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  }
+}
 
 /* 600px */
 @media only screen and (min-width: 37.5em) {
