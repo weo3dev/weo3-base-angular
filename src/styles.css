@@ -1,6 +1,6 @@
 @import 'mdstyles.css';
 /*****************************************
-* weo3 dev & design :: revised december 29, 2017
+* weo3 dev & design :: updated may 30, 2018
 * 1. Elements
 * 2. Material Design amendments
 * 3. General
@@ -146,7 +146,7 @@ section {
 
 .project-list {
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 3vw;
 }
 /* no grid support? */
 .project-list {
@@ -156,7 +156,7 @@ section {
 .project-list {
   display: grid;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-auto-rows: minmax(420px, auto);
 }
 
@@ -618,14 +618,15 @@ nouislider {
   breakpoints revised: 5/29/2018
 ****************************************/
 
-/* 400px */
+/* above 400px */
 @media only screen and (min-width: 26em) {
   .project-list {
+    grid-gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   }
 }
 
-/* 600px */
+/* above 600px */
 @media only screen and (min-width: 37.5em) {
   .portrait {
     max-width: 20vw;
@@ -640,7 +641,7 @@ nouislider {
     padding-right: 10%;
   }
 }
-/* 900px */
+/* above 900px */
 @media only screen and (min-width: 56.25em) {
   header {
     display: none;
