@@ -250,7 +250,7 @@ a[href].project-link:after {
 .entries-list {
   display: grid;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   grid-auto-rows: 1fr;
 }
 @supports (display: grid) {
@@ -622,7 +622,7 @@ nouislider {
 @media only screen and (min-width: 26em) {
   .project-list {
     grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   }
 }
 
