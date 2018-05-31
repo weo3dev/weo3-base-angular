@@ -100,7 +100,7 @@ nav img {
   display: none;
 }
 nav button {
-  flex: 1;
+  flex: 1 1 20vw;
   border-radius: 0;
   line-height: 0.8;
   background: #FAFAFA;
