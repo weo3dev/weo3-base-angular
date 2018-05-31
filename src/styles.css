@@ -107,6 +107,7 @@ nav button {
   border: none;
   border-width: 0;
   color: #336699;
+  margin: 0;
 }
 nav button:visited {
   color: #336699;
@@ -621,7 +622,6 @@ nouislider {
 /* above 400px */
 @media only screen and (min-width: 26em) {
   .project-list {
-    grid-gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   }
 }
@@ -694,6 +694,10 @@ nouislider {
 
   .work {
     width: 90vw;
+  }
+
+  .project-list {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
   blockquote {
