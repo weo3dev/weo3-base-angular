@@ -1,6 +1,6 @@
-@import 'mdstyles.css';
+/* @import 'mdstyles.css'; */
 /*****************************************
-* weo3 dev & design :: updated may 30, 2018
+* weo3 dev & design :: updated june 11, 2018
 * 1. Elements
 * 2. Material Design amendments
 * 3. General
@@ -70,11 +70,13 @@ header {
   background: #336699;
   box-shadow: 0 0 3px #336699;
 }
+
 header img {
   height: 2.5em;
   width: 2.5em;
   margin: 0 0.5em;
 }
+
 header h1 {
   flex-grow: 1;
   margin: 0;
@@ -96,19 +98,21 @@ nav {
   height: 3em;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
-nav img {
-  display: none;
-}
-nav button {
-  flex: 1 1 20vw;
-  border-radius: 0;
-  line-height: 0.8;
-  background: #FAFAFA;
-  border: none;
-  border-width: 0;
-  color: #336699;
-  margin: 0;
-}
+
+  nav img {
+    display: none;
+  }
+
+  nav button {
+    flex: 1 1 20vw;
+    border-radius: 0;
+    line-height: 0.8;
+    background: #FAFAFA;
+    border: none;
+    border-width: 0;
+    color: #336699;
+    margin: 0;
+  }
 nav button:visited {
   color: #336699;
 }
