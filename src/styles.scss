@@ -352,6 +352,7 @@ label {
   display: flex;
   flex-direction: column;
   margin: 10px;
+
   .card-image .card-title {
     padding: 0 0.2em;
     background: $weo3-color-white;
@@ -365,6 +366,7 @@ label {
   .card-content {
     flex: 1;
     padding: 0.25em 0.3em 0;
+    
     p {
       font-size: 1em;
       line-height: 1.2;

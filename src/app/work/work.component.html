@@ -2,125 +2,197 @@
     ngFor [ card, card image, card title, card content(description), card content(skills), card action]
 -->
 
+<!-- new layout idea -->
+
+<!-- 
+<ul class="cards">
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--fence"></div>
+      <div class="card__content">
+        <div class="card__title">Flex</div>
+        <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+        <button class="btn btn--block card__btn">Button</button>
+      </div>
+    </div>
+  </li>
+  --- // --- 
+  x ... <li></li>
+</ul>
+
+-->
+
+
 <section class="work">
-  <ul class="project-list">
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/weo3-ss-dla.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">Los Angeles Tourism Board & Convention</p>
-        <p class="project-summary">Create, build, and launch new site components for new site launch, 2019.</p>
-        <p class="project-technology"><strong>Tech: </strong> CSS3, HTML5, JavaScript, Drupal</p>
-        <a class="project-link" href="http://www.discoverla.com" target="_blank">view site</a>
-      </div>
-    </li>
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/weo3-ss-codazen.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">Codazen</p>
-        <p class="project-summary">Build and test web-based content and components for Facebook.</p>
-        <p class="project-technology"><strong>Tech: </strong> XHP, React, JavaScript, CSS</p>
-        <a class="project-link" href="http://www.codazen.com" target="_blank">view site</a>
-      </div>
-    </li>
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/weo3-ss-lsav.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">Lakeshore Audiovisual</p>
-        <p class="project-summary">Direct CSS styling and implementation. Debug issues with the theme and plugins.</p>
-        <p class="project-technology"><strong>Tech: </strong>WordPress, CSS, JavaScript, PHP</p>
-        <a href="http://www.lsav.tv" target="_blank" class="project-link">view site</a>
-      </div>
-    </li>
 
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/weo3-ss-meredith.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">Meredith Marketing</p>
-        <p class="project-summary">Refactor existing codebase. Build and launch new site components.</p>
-        <p class="project-technology"><strong>Tech: </strong>HTML, Sass, CSS, JavaScript, Freemarker</p>
-        <a href="http://www.meredith.com/" target="_blank" class="project-link">view site</a>
-      </div>
-    </li>
 
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/weo3-ss-la84.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">LA84 Foundation</p>
-        <p class="project-summary">Full website rebuild & launch.</p>
-        <p class="project-technology"><strong>Tech: </strong>WordPress, HTML, CSS, JavaScript</p>
-        <a href="http://www.la84.org" target="_blank" class="project-link">view site</a>
-      </div>
-    </li>
+  <dl class="work-examples">
 
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/weo3-ss-snl.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">Sargent &amp; Lundy</p>
-        <p class="project-summary">Full website rebuild.</p>
-        <p class="project-technology"><strong>Tech: </strong>WordPress, HTML, CSS, JavaScript, PHP</p>
-        <a href="http://www.sargentlundy.com" target="_blank" class="project-link">view site</a>
-      </div>
-    </li>
+        <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+          <figure>
+              <img src="assets/images/weo3-ss-dla.jpg" alt="Discover Los Angeles website screenshot">
+          </figure>
+          <dt itemprop="name">Los Angeles Tourism &amp; Convention Board</dt>
+          <dd itemprop="responsibilities">Create, build, and launch new site design, early 2019.</dd>
+          <dd itemprop="technologies"><strong>Tech: </strong> CSS3, HTML5, JavaScript, Drupal</dd>
+          <dd itemprop="url">
+            <a href="http://www.discoverla.com" target="_blank">view site
+              <i class="material-icons">launch</i>
+            </a>
+          </dd>
+        </div>
+      
+        <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+          <figure>
+              <img src="assets/images/weo3-ss-codazen.jpg" alt="alternate">
+          </figure>          
+          <dt itemprop="name">Codazen</dt>
+          <dd itemprop="responsibilities">Build and test web-based content and components for Facebook.</dd>
+          <dd itemprop="technologies"><strong>Tech: </strong>XHP, React, JavaScript, CSS</dd>
+          <dd itemprop="url"><a href="http://www.codazen.com" target="_blank">view site<i class="material-icons">launch</i>
+          </a></dd>
+        </div>
+      
+        <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+          <figure>
+              <img src="assets/images/weo3-ss-lsav.jpg" alt="alternate">
+          </figure>          
+          <dt itemprop="name">Lakeshore Audiovisual</dt>
+          <dd itemprop="responsibilities">Lead and direct CSS styling and implementation. Debug plugin conflicts and deliver replacement solutions.</dd>
+          <dd itemprop="technologies"><strong>Tech: </strong>WordPress, CSS, JavaScript, PHP</dd>
+          <dd itemprop="url">
+            <a href="http://www.lsav.tv" target="_blank">view site
+              <i class="material-icons">launch</i>
+            </a>
+          </dd>
+        </div>
+      
+        <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+          <figure>
+              <img src="assets/images/weo3-ss-meredith.jpg" alt="alternate">
+          </figure>          
+          <dt itemprop="name">Meredith Marketing</dt>
+          <dd itemprop="responsibilities">Refactor existing codebase. Build and launch new site components.</dd>
+          <dd itemprop="technologies"><strong>Tech: </strong>HTML, Sass, CSS, JavaScript, Freemarker</dd>
+          <dd itemprop="url">
+            <a href="http://www.meredith.com" target="_blank">view site
+              <i class="material-icons">launch</i>
+            </a>
+          </dd>
+        </div>
+      
+        <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+          <figure>
+              <img src="assets/images/weo3-ss-la84.jpg" alt="alternate">
+          </figure>          
+          <dt itemprop="name">LA84 Foundation</dt>
+          <dd itemprop="responsibilities">Full website rebuild & launch.</dd>
+          <dd itemprop="technologies"><strong>Tech: </strong>WordPress, HTML, CSS, JavaScript</dd>
+          <dd itemprop="url">
+            <a href="http://www.la84.org" target="_blank">view site
+              <i class="material-icons">launch</i>
+            </a>
+          </dd>
+        </div>
+      
+        <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+          <figure>
+              <img src="assets/images/weo3-ss-snl.jpg" alt="alternate">
+          </figure>          
+          <dt itemprop="name">Sargent &amp; Lundy</dt>
+          <dd itemprop="responsibilities">Full website rebuild.</dd>
+          <dd itemprop="technologies"><strong>Tech: </strong>WordPress, HTML, CSS, JavaScript, PHP</dd>
+          <dd itemprop="url">
+            <a href="http://www.sargentlundy.com" target="_blank">view site<i class="material-icons">launch</i></a>
+          </dd>
+        </div>
+      
+        <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+          <figure>
+              <img src="assets/images/screenshot-reyes.jpg" alt="alternate">
+          </figure>          
+          <dt itemprop="name">Reyes Beverages</dt>
+          <dd itemprop="responsibilities">Custom build of responsive, card-based interface on top of SharePoint 2013.</dd>
+          <dd itemprop="technologies"><strong>Tech: </strong>HTML, JavaScript, CSS</dd>
+          <dd itemprop="url">
+            <a>private intranet<i class="material-icons">launch</i></a>
+          </dd>
+        </div>
 
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/screenshot-reyes.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">Reyes Beverages</p>
-        <p class="project-summary">Full design and build of responsive, card-based interface on top of SharePoint2013.</p>
-        <p class="project-technology"><strong>Tech: </strong>HTML, JavaScript, CSS</p>
-        <a class="project-link">private intranet</a>
-      </div>
-    </li>
+        <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+          <figure>
+              <img src="assets/images/weo3-ss-aic.jpg" alt="alternate">
+          </figure>          
+          <dt itemprop="name">Art Institute of Chicago</dt>
+          <dd itemprop="responsibilities">Campaign landing pages, exhibit-specific sections, email campaigns.</dd>
+          <dd itemprop="technologies"><strong>Tech: </strong>HTML, CSS, JavaScript, Ruby on Rails</dd>
+          <dd itemprop="url">
+            <a href="http://www.artic.edu" target="_blank">view site
+              <i class="material-icons">launch</i>
+            </a>
+          </dd>
+        </div>        
+      
+        <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+          <figure>
+              <img src="assets/images/screenshot-hollister.jpg" alt="alternate">
+          </figure>          
+          <dt itemprop="name">Hollister</dt>
+          <dd itemprop="responsibilities">Full redesign and theme build with SharePoint 2013.</dd>
+          <dd itemprop="technologies"><strong>Tech: </strong>HTML, JavaScript, CSS</dd>
+          <dd itemprop="url">
+            <a>private intranet<i class="material-icons">launch</i>
+            </a>
+          </dd>
+        </div>
+      
+        <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+          <figure>
+              <img src="assets/images/screenshot-tahoe.jpg" alt="alternate">
+          </figure>          
+          <dt itemprop="name">Tahoe Partners</dt>
+          <dd itemprop="responsibilities">SharePoint2013 design and development</dd>
+          <dd itemprop="technologies"><strong>Tech: </strong>HTML, JavaScript, Node, Handlebars, CSS</dd>
+          <dd itemprop="url">
+            <a href="http://www.tahoepartners.com" target="_blank">view site
+              <i class="material-icons">launch</i>
+            </a>
+          </dd>
+        </div>
+      
+        <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+          <figure>
+              <img src="assets/images/weo3-ss-panduit.jpg" alt="alternate">
+          </figure>          
+          <dt itemprop="name">Panduit</dt>
+          <dd itemprop="responsibilities">Full site rebuild and launch.</dd>
+          <dd itemprop="technologies"><strong>Tech: </strong>HTML, CSS, JavaScript, jQuery, Fatwire</dd>
+          <dd itemprop="url">
+            <a href="http://www.panduit.com" target="_blank">view site
+              <i class="material-icons">launch</i>
+            </a>
+          </dd>
+        </div>
+      
+        <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+          <figure>
+              <img src="assets/images/screenshot-chicago-booth.jpg" alt="alternate">
+          </figure>          
+          <dt itemprop="name">UIC Chicago Booth</dt>
+          <dd itemprop="responsibilities">Full site redesign, build, and launch.</dd>
+          <dd itemprop="technologies"><strong>Tech: </strong>HTML, CSS, JavaScript, Foundation</dd>
+          <dd itemprop="url">
+            <a href="http://www.chicagobooth.edu" target="_blank">view site
+              <i class="material-icons">launch</i>
+            </a>
+          </dd>
+        </div>
+      
+      
+      
+  </dl>
 
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/screenshot-hollister.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">Hollister</p>
-        <p class="project-summary">Full redesign and theme build with SharePoint2013.</p>
-        <p class="project-technology"><strong>Tech: </strong>HTML, JavaScript, CSS</p>
-        <a class="project-link">private intranet</a>
-      </div>
-    </li>
-
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/screenshot-tahoe.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">Tahoe Partners</p>
-        <p class="project-summary">SharePoint2013 design and development</p>
-        <p class="project-technology"><strong>Tech: </strong>HTML, JavaScript, Node, Handlebars, CSS</p>
-        <a href="http://www.tahoepartners.com" target="_blank" class="project-link">view site</a>
-      </div>
-    </li>
-
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/weo3-ss-aic.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">Art Institute of Chicago</p>
-        <p class="project-summary">Campaign pages, landing pages, exhibit-specific projects, email campaigns.</p>
-        <p class="project-technology"><strong>Tech: </strong>HTML, CSS, JavaScript, Ruby on Rails</p>
-        <a href="http://www.artic.edu" target="_blank" class="project-link">view site</a>
-      </div>
-    </li>
-
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/weo3-ss-panduit.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">Panduit</p>
-        <p class="project-summary">Full site rebuild and launch.</p>
-        <p class="project-technology"><strong>Tech: </strong>HTML, CSS, JavaScript, jQuery, Fatwire</p>
-        <a href="http://www.panduit.com" target="_blank" class="project-link">view site</a>
-      </div>
-    </li>
-
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/screenshot-chicago-booth.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">UIC Chicago Booth</p>
-        <p class="project-summary">Full site redesign, build, and launch.</p>
-        <p class="project-technology"><strong>Tech: </strong>HTML, CSS, JavaScript, Foundation</p>
-        <a href="http://www.chicagobooth.edu" target="_blank" class="project-link">view site</a>
-      </div>
-    </li>
+  <!-- 
 
     <li>
       <div class="project-image" style="background-image: url(assets/images/screenshot-thin-client.jpg);"></div>
@@ -134,22 +206,7 @@
 
   </ul>
 
+-->
+
 </section>
 
-
-<!--
-  <div class="card">
-    <div class="card-image">
-      <img src="assets/images/screenshot-dollop.jpg">
-      <span class="card-title">Dollop Coffee</span>
-    </div>
-    <div class="card-content">
-      <p>Transitional responsive site for temporary use.</p>
-      <p>
-        <strong>Tools</strong>: HTML, CSS, Foundation</p>
-    </div>
-    <div class="card-action">
-      <a href="http://www.dollopcoffee.com" target="_blank">view site</a>
-    </div>
-  </div>
--->
