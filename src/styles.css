@@ -163,7 +163,7 @@ section {
   display: grid;
   margin: 0 auto;
   grid-gap: 3vw;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: minmax(460px, auto);
 }
 
@@ -639,7 +639,7 @@ nouislider {
 /* above 400px */
 @media only screen and (min-width: 26em) {
   .project-list {
-    /* grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); */
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   }
 }
 
