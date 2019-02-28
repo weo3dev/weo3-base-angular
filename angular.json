@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
+  "version": 2,
   "newProjectRoot": "projects",
   "projects": {
     "weo3-base-angular": {
@@ -25,7 +25,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/scrollreveal/dist/scrollreveal.js"              
+            ]
           },
           "configurations": {
             "production": {

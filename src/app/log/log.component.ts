@@ -16,18 +16,19 @@ export class LogComponent implements OnInit {
   constructor(private logsService: LogsService, private categoriesService: CategoriesService, private http: HttpClient) { }
 
   ngOnInit() {
-      this.logsService.getCategories()
-      .subscribe((data) => {
-        this.categoryList = data;
-      },
-        err => console.error(err),
-        () => this.getPostsWithCategories()
-      );
+      // this.logsService.getCategories()
+      // .subscribe((data) => {
+      //   this.categoryList = data;
+      // },
+      //   err => console.error(err),
+      //   () => this.getPostsWithCategories()
+      // );
   }
 
   getPostsWithCategories() {
     this.logsService.getEntries()
       .subscribe( data => {
+        console.log(data);
         this.entries = data;
       },
       err => console.error(err),

@@ -25,7 +25,9 @@
     "@angular/router": "^7.2.1",
     "@nguniversal/module-map-ngfactory-loader": "^7.1.0",
     "core-js": "^2.6.2",
+    "ngx-scrollreveal": "^3.0.0",
     "rxjs": "^6.3.3",
+    "scrollreveal": "^4.0.5",
     "zone.js": "^0.8.28"
   },
   "devDependencies": {

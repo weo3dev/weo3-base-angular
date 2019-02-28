@@ -19,6 +19,7 @@ import { LogsService } from './shared/services/logs.service';
 import { CategoriesService } from './shared/services/categories.service';
 import { TextExcerptPipe } from './shared/pipes/text-excerpt.pipe';
 import { CategoryColorPipe } from './shared/pipes/category-color.pipe';
+import { NgsRevealModule } from 'ngx-scrollreveal';
 
 import { Title } from '@angular/platform-browser';
 
@@ -54,6 +55,7 @@ const ROUTES = [
     MatIconModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    NgsRevealModule,
     HttpModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES)

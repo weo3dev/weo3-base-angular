@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/metavurt/weo3-base-angular/badge.svg?branch=master)](https://coveralls.io/github/metavurt/weo3-base-angular?branch=master)
+
 # WEO3 Development and Design
 ### core build for [weo3.com](http://www.weo3.com)
 
