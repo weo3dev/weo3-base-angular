@@ -4,7 +4,7 @@
     <p>fetching log entries</p>
   </div>
   <ul class="entries-list" *ngIf="entries">
-    <li *ngFor="let entry of entries">
+    <li *ngFor="let entry of entries" class="fade-in-manual">
       <entry-listing [entry]="entry"></entry-listing>
     </li>
   </ul>
