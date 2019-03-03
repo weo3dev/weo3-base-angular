@@ -1,10 +1,13 @@
 <section class="contact">
 
-  <div class="beer-call">
+  <!-- <div class="beer-call">
     <p *ngIf="!clientSubmitted">help me buy more beer.</p>
     <p *ngIf="clientSubmitted && client.valid">CHEERS!</p>
-  </div>
+  </div> -->
 
+  <!-- <span class="background-beer">
+    <img src="assets/images/beer.png" />
+  </span> -->
 
   <form novalidate [formGroup]="client" (ngSubmit)="connectMe()">
 
@@ -145,6 +148,10 @@
       You will hear from me within 48 hours.
     </p>
 
+<!-- 
+    <span class="background-beer">
+        <img src="assets/images/beer.png" />
+      </span> -->
 
   </form>
 
