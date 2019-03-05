@@ -23,18 +23,18 @@
   --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
   --primary-white: hsla(0, 0%, 100%, 1);
+  --primary-red: hsla(0, 100%, 30%, 1);
+
   --weo3-white: hsla(0, 0%, 98%, 1);
   --weo3-black: hsla(0, 0%, 20%, 1);
+  --weo3-gray: hsla(0, 0%, 68%, 1);
   --weo3-blue: hsla(210, 50%, 40%, 1);
   --weo3-light-blue: hsla(210, 50%, 58%, 1);
   --weo3-highlight: hsla(24, 100%, 50%, 1);
 
   --weo3-text: hsla(0, 0%, 27%, 1);
 
-
-  --header-height: 14vh;
-  --main-height: calc(100vh - (var(--header-height)*2));
-
+  --header-height: 5.5vh;
 
 }
 
@@ -60,7 +60,11 @@ body {
 
 app-root {
   display: grid;
-  grid-template-rows: var(--header-height) var(--main-height) var(--header-height);
+  grid-template-rows: var(--header-height) auto var(--header-height);
+}
+
+p {
+  margin-bottom: 2.5rem;
 }
 
 
@@ -117,17 +121,15 @@ header {
   align-items: center;
   position: fixed;
   z-index: 200;
-  /* top: 0; */
   width: 100%;
-  /* height: 3rem; */
   background: var(--weo3-blue);
   box-shadow: 0 0 3px var(--weo3-blue);
 }
 
 header img {
-  height: 2.5em;
-  width: 2.5em;
-  margin: 0 0.5em;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0.5rem;
 }
 
 header h1 {
@@ -149,7 +151,7 @@ nav {
   background: var(--weo3-white);
   width: 100vw;
   height: 3em;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 4px hsla(0, 0%, 0%, 0.5);
 }
 
   nav button {
@@ -182,9 +184,10 @@ button .caption {
 
 section {
   display: grid;
-  grid-template-columns: minmax(1rem, 1fr) minmax(280px, 800px) minmax(1rem, 1fr);
+  grid-template-columns: minmax(1rem, 1fr) minmax(280px, 1200px) minmax(1rem, 1fr);
   grid-template-rows: auto;
   height: 100%;
+  margin-top: var(--header-height);
 }
 
 section > * {
@@ -192,7 +195,7 @@ section > * {
 }
 
 #work {
-  grid-template-columns: minmax(1rem, 1fr) minmax(280px, 1200px) minmax(1rem, 1fr);
+  grid-template-columns: minmax(1rem, 1fr) minmax(280px, 1600px) minmax(1rem, 1fr);
 }
 
 .work-examples {
@@ -202,16 +205,16 @@ section > * {
   margin: 0 auto;
   grid-gap: 3rem;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  grid-auto-rows: minmax(390px, auto);
+  grid-auto-rows: minmax(280px, 500px);
 }
 
 .work-example {
   display: grid;
   grid-template-columns: 0.75rem 1fr 0.75rem;
-  grid-template-rows: min-content 1fr 0.75fr min-content;
+  grid-template-rows: min-content 2fr 4fr 3fr 1fr;
   background: var(--primary-white);
   border-radius: 4px;
-  box-shadow: 0 10px 40px -14px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 40px -14px hsla(0, 0%, 0%, 0.5);
 }
 
   .work-example > * {
@@ -237,14 +240,19 @@ section > * {
 
   dd[itemprop="responsibilities"],
   dd[itemprop="technologies"] {
-    font-size: 0.85em;
+    font-size: calc(20px + (22 - 20) * ((100vw - 320px) / (1600 - 320)));
     line-height: 1.25;
     padding: 0.25em 0;
+  }
+
+  dd[itemprop="responsibilities"] {
+
   }
 
   dd[itemprop="technologies"] {
     border-bottom: 1px solid rgba(160,160,160,0.2);
     padding-bottom: 1rem;
+    align-self: end;
   }
 
   dd[itemprop="url"] {
@@ -257,14 +265,14 @@ section > * {
       letter-spacing: 1px;
       align-items: center;
       justify-content: flex-end;
-      padding: 0.75rem;   
-      color: #afafaf;
+      padding: 0.5rem;   
+      color: hsla(0, 0%, 69%, 1);
       font-size: 1rem; 
     }
 
     dd[itemprop="url"] a[href] {
       color: var(--weo3-blue);
-      background: linear-gradient(117deg, rgba(134,174,215,1) 53%, rgba(255,255,255,1) 55%); 
+      background: linear-gradient(117deg, var(--weo3-light-blue) 53%, var(--primary-white) 55%); 
       background-size: 300% 100%;
       background-position: right bottom;
       transition: all ease-in-out .3s;          
@@ -272,7 +280,7 @@ section > * {
 
     dd[itemprop="url"] a[href]:hover {
       background-position: left bottom;
-      color: #fff;
+      color: var(--primary-white);
     }
 
     dd[itemprop="url"] a[href] i {
@@ -282,12 +290,6 @@ section > * {
     dd[itemprop="url"] a:not([href]) i {
      display: none;
     }
-
-
-
-.contact {
-  /* padding-bottom: 8em; */
-}
 
 
 .loading-layout {
@@ -367,8 +369,8 @@ entry-listing {
 .entry-listing {
   display: flex;
   flex-direction: column;
-  color: #454545;
-  border: 1px solid #adadad;
+  color: var(--weo3-text);
+  border: 1px solid var(--weo3-gray);
 }
 .entry-listing .title-and-date {
   display: block;
@@ -397,8 +399,8 @@ entry-listing {
 .entry-listing .entry-link {
   align-self: flex-end;
   text-decoration: none;
-  color: #FAFAFA;
-  background: #FF6600;
+  color: var(--weo3-white);
+  background: var(--weo3-highlight);
   padding: 0 1em;
   border-radius: 0.25em;
   margin: 0 1em 1em;
@@ -410,7 +412,7 @@ entry-listing {
 
 pre {
   overflow: auto;
-  background: #EFEFEF;
+  background: var(--weo3-white);
   padding: 1em;
 }
 
@@ -423,7 +425,7 @@ blockquote::after {
 
 button[type="submit"] {
   background: var(--weo3-blue);
-  color: #FAFAFA;
+  color: var(--weo3-white);
   float: right;
 }
 
@@ -478,6 +480,10 @@ button[type="submit"] {
   display: block;
 }
 
+.social-links a:hover img {
+  filter: drop-shadow(0 0 5px rgba(51, 51, 51, 0.75));
+}
+
 
 label.prompter {
   color: var(--weo3-blue);
@@ -489,7 +495,7 @@ label.prompter {
 
 .help-block {
   position: absolute;
-  color: #900;
+  color: var(--primary-red);
 }
 
 nouislider {
@@ -631,31 +637,22 @@ nouislider {
   }
 }
 
-/* above 600px */
-@media only screen and (min-width: 37.5em) {
-  /* .portrait {
-    max-width: 20vw;
-  } */
 
-  nouislider {
-    width: 80%;
-    margin: auto;
-  }
-
-  .engagements li {
-    padding-right: 10%;
-  }
-}
 /* above 900px */
 @media only screen and (min-width: 56.25em) {
+
+  /* main switch from bottom nav to top nav */
+  header h1 {
+    display: none;
+  }
 
   nav {
     justify-content: initial;
     align-content: flex-start;
-    background: var(--weo3-blue);
-    box-shadow: 0 0 3px var(--weo3-blue);
-    top: 0;
+    background: transparent;
+    box-shadow: unset;
     color: var(--weo3-white);
+    position: relative;
   }
 
   nav button {
@@ -679,12 +676,14 @@ nouislider {
     cursor: default;
   }
   nav button .caption {
-    color: #FAFAFA;
+    color: var(--weo3-white);
     font-variant: small-caps;
     font-weight: 400;
     font-size: 1.5em;
   }
 
+
+  /* may no longer be necessary */
   blockquote {
     font-family: "Playfair Display", Times, "Times New Roman", serif;
     font-size: 2em;
@@ -706,10 +705,6 @@ nouislider {
   }
   blockquote:first-of-type {
     text-indent: -10px;
-  }
-
-  .social-links a:hover img {
-    filter: drop-shadow(0 0 5px rgba(51, 51, 51, 0.75));
   }
 
   .engagements li {
