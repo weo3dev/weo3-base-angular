@@ -11,6 +11,19 @@
       <fieldset>
         <legend>About you</legend>
 
+
+        <label class="hfl">
+          <input type="text" id="fullname" formControlName="fullname" placeholder="Full Name" />
+          <span>Full Name</span>
+          <div class="error" *ngIf="client.get('fullname').hasError('required') && client.get('fullname').touched">
+            Name is required.
+          </div>
+          <div class="error" *ngIf="client.get('fullname').hasError('minlength') && client.get('fullname').touched">
+            Name must be a minimum of 2 letters in length.
+          </div>
+        </label>
+
+<!--         
         <div class="input-field" >
           <input type="text" id="fullname" formControlName="fullname">
           <label for="fullname">Full Name</label>
@@ -20,9 +33,11 @@
           <div class="error" *ngIf="client.get('fullname').hasError('minlength') && client.get('fullname').touched">
             Name must be a minimum of 2 letters in length.
           </div>
-            </div>
+        </div> -->
 
-        <div class="input-field">
+
+
+        <!-- <div class="input-field">
           <input type="text" id="email" formControlName="email">
           <label for="email">Email</label>
           <div class="error" *ngIf="client.get('email').hasError('required') && client.get('email').touched">
@@ -33,7 +48,9 @@
         <div class="input-field">
               <input type="text" id="website" formControlName="website">
               <label for="website">Website (when applicable)</label>
-            </div>
+        </div> -->
+
+
         </fieldset>
 
       <fieldset>
