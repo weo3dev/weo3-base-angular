@@ -1,24 +1,15 @@
-<section class="contact">
-
-  <!-- <div class="beer-call">
-    <p *ngIf="!clientSubmitted">help me buy more beer.</p>
-    <p *ngIf="clientSubmitted && client.valid">CHEERS!</p>
-  </div> -->
-
-  <!-- <span class="background-beer">
-    <img src="assets/images/beer.png" />
-  </span> -->
+<section id="contact">
 
   <form novalidate [formGroup]="client" (ngSubmit)="connectMe()">
 
     <ng-container *ngIf="!clientSubmitted">
 
-      <p>Yes, I love beer but I also love asking a lot of questions up front, which usually enables a more efficient use of our time. Hence, the connection form below, with pretty blanks and buttons and sliders, <em>oh my!</em></p>
-      <p>This should only take a few minutes for you to complete, helping me to identify your needs for the project. After sending, you will recieve an estimate from me within 48 hours.</p>
-      <p><br/></p>
+      <h3>Let’s work together</h3>
+
+      <p>I am always open to hearing about new opportunties to make good things happen! Use this form to let me know of your needs and how I could possibly help.</p>
 
       <fieldset>
-            <legend>About you</legend>
+        <legend>About you</legend>
 
         <div class="input-field" >
           <input type="text" id="fullname" formControlName="fullname">
@@ -47,7 +38,7 @@
 
       <fieldset>
         <legend>About your project</legend>
-        <label class="prompter">What can I help you with?</label>
+        <label class="prompter">How can I help you?</label>
           <p><input type="radio" formControlName="pcategory" id="category1" value="design" class="with-gap">
             <label for="category1">web design</label>
           </p>
@@ -61,7 +52,7 @@
             Category is required.
           </div>
         <p></p>
-        <label class="prompter">Is this a new project or a redesign for an existing site/brand?</label><br/>
+        <label class="prompter">Is this a new project or a redesign/rebuild for an existing site/brand?</label><br/>
           <p><input type="radio" formControlName="pstatus" id="status1" value="new" class="with-gap"><label for="status1"><em>NEW!</em></label></p>
           <p><input type="radio" formControlName="pstatus" id="status2" value="rebuild" class="with-gap" [checked]="client.value['pstatus'] == rebuild"><label for="status2">rebuild</label></p>
           <div class="error" *ngIf="client.get('pstatus').hasError('required') && client.get('pstatus').touched">
@@ -147,11 +138,6 @@
       <span class="lgft">Thank you, {{ client.value['fullname'] }}!</span><br/>
       You will hear from me within 48 hours.
     </p>
-
-<!-- 
-    <span class="background-beer">
-        <img src="assets/images/beer.png" />
-      </span> -->
 
   </form>
 

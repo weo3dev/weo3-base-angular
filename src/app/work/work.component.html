@@ -1,29 +1,8 @@
-<!-- need to build a service for this ...
+<!-- TODO: build work service ...
     ngFor [ card, card image, card title, card content(description), card content(skills), card action]
 -->
 
-<!-- new layout idea -->
-
-<!-- 
-<ul class="cards">
-  <li class="cards__item">
-    <div class="card">
-      <div class="card__image card__image--fence"></div>
-      <div class="card__content">
-        <div class="card__title">Flex</div>
-        <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
-        <button class="btn btn--block card__btn">Button</button>
-      </div>
-    </div>
-  </li>
-  --- // --- 
-  x ... <li></li>
-</ul>
-
--->
-
-
-<section class="work">
+<section id="work">
 
 
   <dl class="work-examples" [ngsRevealSet]="{ reset:true}" [ngsInterval]="75" [ngsSelector]="'.work-example'">
@@ -33,7 +12,7 @@
               <img src="assets/images/weo3-ss-dla.jpg" alt="Discover Los Angeles website screenshot">
           </figure>
           <dt itemprop="name">Los Angeles Tourism &amp; Convention Board</dt>
-          <dd itemprop="responsibilities">Lead frontend developer for Discover L.A.'s new site.</dd>
+          <dd itemprop="responsibilities">Lead frontend developer for Discover L.A.’s new site.</dd>
           <dd itemprop="technologies"><strong>Tech: </strong> CSS3, HTML5, JavaScript, Drupal</dd>
           <dd itemprop="url">
             <a href="http://www.discoverla.com" target="_blank">view site
@@ -86,7 +65,7 @@
               <img src="assets/images/weo3-ss-la84.jpg" alt="alternate">
           </figure>          
           <dt itemprop="name">LA84 Foundation</dt>
-          <dd itemprop="responsibilities">Full website rebuild & launch.</dd>
+          <dd itemprop="responsibilities">Full website rebuild &amp; launch.</dd>
           <dd itemprop="technologies"><strong>Tech: </strong>WordPress, HTML, CSS, JavaScript</dd>
           <dd itemprop="url">
             <a href="http://www.la84.org" target="_blank">view site
@@ -109,13 +88,13 @@
       
         <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
           <figure>
-              <img src="assets/images/screenshot-reyes.jpg" alt="alternate">
+              <img src="assets/images/weo3-ss-reyes.jpg" alt="alternate">
           </figure>          
           <dt itemprop="name">Reyes Beverages</dt>
           <dd itemprop="responsibilities">Custom build of responsive, card-based interface on top of SharePoint 2013.</dd>
           <dd itemprop="technologies"><strong>Tech: </strong>HTML, JavaScript, CSS</dd>
           <dd itemprop="url">
-            <a>private intranet<i class="material-icons">launch</i></a>
+            <a>private intranet</a>
           </dd>
         </div>
 
@@ -135,7 +114,7 @@
       
         <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
           <figure>
-              <img src="assets/images/screenshot-hollister.jpg" alt="alternate">
+              <img src="assets/images/weo3-ss-hollister.jpg" alt="alternate">
           </figure>          
           <dt itemprop="name">Hollister</dt>
           <dd itemprop="responsibilities">Full redesign and theme build with SharePoint 2013.</dd>
@@ -148,7 +127,7 @@
       
         <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
           <figure>
-              <img src="assets/images/screenshot-tahoe.jpg" alt="alternate">
+              <img src="assets/images/weo3-ss-tahoe.jpg" alt="alternate">
           </figure>          
           <dt itemprop="name">Tahoe Partners</dt>
           <dd itemprop="responsibilities">SharePoint2013 design and development</dd>
@@ -176,7 +155,7 @@
       
         <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
           <figure>
-              <img src="assets/images/screenshot-chicago-booth.jpg" alt="alternate">
+              <img src="assets/images/weo3-ss-booth.jpg" alt="alternate">
           </figure>          
           <dt itemprop="name">UIC Chicago Booth</dt>
           <dd itemprop="responsibilities">Full site redesign, build, and launch.</dd>
@@ -188,23 +167,26 @@
           </dd>
         </div>
       
-      
-      
   </dl>
 
   <!-- 
 
-    <li>
-      <div class="project-image" style="background-image: url(assets/images/screenshot-thin-client.jpg);"></div>
-      <div class="project-information">
-        <p class="project-name">IBM Thin Client</p>
-        <p class="project-summary">Multiple product campaign site builds and launches.</p>
-        <p class="project-technology"><strong>Tech: </strong>HTML, CSS, JavaScript</p>
-        <a class="project-link">archived</a>
-      </div>
-    </li>
+    <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
+      <figure>
+        <img src="assets/images/weo3-ss-project.jpg" alt="alternate">
+      </figure>          
+      <dt itemprop="name">Project Name</dt>
+      <dd itemprop="responsibilities">Project things.</dd>
+      <dd itemprop="technologies"><strong>Tech: </strong>Language, things, other</dd>
+      <dd itemprop="url">
+        <a href="http://www.projectsite.com" target="_blank">view site
+          <i class="material-icons">launch</i>
+        </a>
+      </dd>
+    </div>
 
-  </ul>
+    or use
+    <a>private link behind firewall/intranet</a>
 
 -->
 

@@ -1,15 +1,44 @@
-/* @import 'mdstyles.css'; */
+@import 'mini-reset.css';
+
 /*****************************************
-* weo3 dev & design :: updated june 11, 2018
-* 1. Elements
-* 2. Material Design amendments
-* 3. General
+* weo3 dev & design :: updated march 03, 2019
+* i. Reset
+* 1. Variables
+* 2. Elements
+* 3. Sections
 * 4. Media Queries
 *****************************************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+
+:root {
+  --font-primary: sans-serif;
+  --font-secondary: serif;
+
+  --text-base-size: 1em;
+  --text-scale-ratio: 1.2;
+
+  --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+  --text-sm: calc(1em / var(--text-scale-ratio));
+  --text-md: calc(1em * var(--text-scale-ratio));
+  --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+
+  --primary-white: hsla(0, 0%, 100%, 1);
+  --weo3-white: hsla(0, 0%, 98%, 1);
+  --weo3-black: hsla(0, 0%, 20%, 1);
+  --weo3-blue: hsla(210, 50%, 40%, 1);
+  --weo3-light-blue: hsla(210, 50%, 58%, 1);
+  --weo3-highlight: hsla(24, 100%, 50%, 1);
+
+  --weo3-text: hsla(0, 0%, 27%, 1);
+
+  
+
+
+}
+
+html {
+  width: 100%;
+  height: 100%;
 }
 
 html, body {
@@ -17,8 +46,12 @@ html, body {
   padding: 0;
   font-size: 16px;
   font-family: "Assistant", Arial, Helvetica, sans-serif;
-  color: #565656;
-  background-color: #FAFAFA;
+  color: var(--weo3-text);
+  background-color: var(--weo3-white);
+}
+
+body {
+  height: 100%;
 }
 
 button, input, optgroup, select, textarea {
@@ -39,7 +72,6 @@ img {
   border: 0;
   width: 100%;
 }
-
 
 dd {
   margin: 0;
@@ -70,24 +102,15 @@ a {
 
 header {
   display: flex;
-
   flex-direction: row;
-  
   align-items: center;
-  
   position: fixed;
-  
   z-index: 200;
-  
   top: 0;
-  
   width: 100%;
-  
   height: 3rem;
-  
-  background: #336699;
-  
-  box-shadow: 0 0 3px #336699;
+  background: var(--weo3-blue);
+  box-shadow: 0 0 3px var(--weo3-blue);
 }
 
 header img {
@@ -101,7 +124,7 @@ header h1 {
   margin: 0;
   padding-right: 1em;
   font-size: 2em;
-  color: #FAFAFA;
+  color: var(--weo3-white);
   font-variant: small-caps;
   text-align: right;
 }
@@ -112,38 +135,35 @@ nav {
   position: fixed;
   z-index: 100;
   bottom: 0;
-  background: #FAFAFA;
+  background: var(--weo3-white);
   width: 100vw;
   height: 3em;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
-  /* nav img {
-    display: none;
-  } */
 
   nav button {
     flex: 1 1 20vw;
     border-radius: 0;
     line-height: 0.8;
-    background: #FAFAFA;
+    background: var(--weo3-white);
     border: none;
     border-width: 0;
-    color: #336699;
+    color: var(--weo3-blue);
     margin: 0;
   }
 nav button:visited {
-  color: #336699;
+  color: var(--weo3-blue);
 }
 nav button.active {
-  background: #336699;
+  background: var(--weo3-blue);
 }
 
 button mat-icon, button .caption {
-  color: #336699;
+  color: var(--weo3-blue);
 }
 button.active mat-icon, button.active .caption {
-  color: #FAFAFA;
+  color: var(--weo3-white);
 }
 button .caption {
   font-variant: small-caps;
@@ -151,17 +171,20 @@ button .caption {
 }
 
 /* temporary fix to a bug */
-.mat-button-focus-overlay, .mat-button-ripple {
+/* .mat-button-focus-overlay, .mat-button-ripple {
   z-index: -1;
 }
 
 .mat-button-focus-overlay {
   display: none;
-}
+} */
 
 section {
-  padding: 4.5em 1.25em 6em;
-  margin: 0 auto;
+  /* padding: 4.5em 1.25em 0; */
+  /* margin: 0 auto; */
+  display: grid;
+  grid-template-columns: 1fr minmax(100%, 1000px) 1fr;
+  grid-template-rows: auto;
 }
 
 .work {
@@ -180,7 +203,7 @@ section {
   display: grid;
   grid-template-columns: 0.75rem 1fr 0.75rem;
   grid-template-rows: min-content 1fr 1fr min-content;
-  background: #fff;
+  background: var(--primary-white);
   border-radius: 4px;
   box-shadow: 0 10px 40px -14px rgba(0,0,0,0.5);
 }
@@ -195,7 +218,7 @@ section {
   }
 
   .work-example figure img {
-    box-shadow: inset 0 0 10px #000000;    
+    box-shadow: inset 0 0 10px var(--weo3-black);    
     border-bottom: 1px solid rgba(160,160,160,0.5);
   }
 
@@ -233,7 +256,7 @@ section {
     }
 
     dd[itemprop="url"] a[href] {
-      color: #336699;
+      color: var(--weo3-blue);
       background: linear-gradient(117deg, rgba(134,174,215,1) 53%, rgba(255,255,255,1) 55%); 
       background-size: 300% 100%;
       background-position: right bottom;
@@ -256,16 +279,29 @@ section {
 
 
 .contact {
-  padding-bottom: 8em;
-  background-image: url('assets/images/beer.png');
-  background-position: left bottom;
-  background-size: contain;
+  /* padding-bottom: 8em; */
 }
 
-.weo3-loading {
-  text-align: center;
-  margin-top: 30vh;
+
+.loading-layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .loading-text {
+    flex: 1 0 auto;
+    font-size: 2rem;
+  }
 
 
 .entries-list {
@@ -301,8 +337,8 @@ entry-listing {
   overflow: visible;
   padding: 0;
   border: none;
-  border-top: medium double #84a4bf;
-  color: #84a4bf;
+  border-top: medium double var(--weo3-light-blue);
+  color: var(--weo3-light-blue);
   text-align: center;
   margin: 8em 0;
 }
@@ -312,8 +348,8 @@ entry-listing {
   position: relative;
   top: -0.85em;
   font-size: 2.5em;
-  color: #84a4bf;
-  background: #FAFAFA;
+  color: var(--weo3-light-blue);
+  background: var(--weo3-white);
 }
 .log-entry ul {
   list-style-position: inside;
@@ -329,9 +365,9 @@ entry-listing {
 }
 .entry-listing .title-and-date {
   display: block;
-  color: #FAFAFA;
+  color: var(--weo3-white);
   padding: 1em;
-  background: #84A4BF;
+  background: var(--weo3-light-blue);
 }
 .entry-listing h3 {
   text-transform: capitalize;
@@ -379,130 +415,19 @@ blockquote::after {
 }
 
 button[type="submit"] {
-  background: #336699;
+  background: var(--weo3-blue);
   color: #FAFAFA;
   float: right;
 }
 
 /*****************************************
-	Material Design amendments
-*****************************************/
-h2 {
-  font-size: 2.56rem;
-  line-height: 1;
-  text-transform: capitalize;
-  margin: 1.78rem 0 0 0;
-  padding-bottom: 0;
-  border-bottom: 2px solid #84a4bf;
-}
-
-h3 {
-  font-size: 1.5em;
-  font-variant: small-caps;
-  margin-bottom: 0;
-}
-
-h5 {
-  font-size: 1.94rem;
-  line-height: 1;
-  margin: 0;
-  margin-top: 3rem;
-  font-variant: small-caps;
-}
-h5 + p {
-  margin-top: 0;
-}
-
-p {
-  line-height: 1.8;
-}
-
-.log-entry ul:not(.browser-default) li {
-  list-style-type: disc;
-  text-indent: -1em;
-}
-
-strong {
-  font-weight: 700;
-  /* for font-type Assistant */
-}
-
-fieldset {
-  margin: 0 0 2em 0;
-  border: 1px solid rgba(51, 102, 153, 0.5);
-}
-
-legend {
-  font-variant: small-caps;
-  padding: 0 0.5em;
-  border: 1px solid rgba(51, 102, 153, 0.5);
-  background: #336699;
-  color: #FAFAFA;
-}
-
-label {
-  font-size: 1rem;
-  /*color: #9e9e9e;*/
-  /* label prompt color setting is in section General */
-}
-
-[type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
-  line-height: 1.4;
-  padding-left: 1.5em;
-  padding-right: 2em;
-}
-[type="radio"]:not(:checked) + label::before, [type="radio"]:not(:checked) + label::after {
-  border: 1px solid #336699;
-}
-[type="radio"]:checked + label::after {
-  background-color: #336699;
-}
-
-.with-gap[type="radio"]:checked + label::after {
-  background-color: #336699;
-}
-
-[type="radio"]:checked + label::after {
-  border: 1px solid #336699;
-}
-
-.with-gap[type="radio"]:checked + label::before, .with-gap[type="radio"]:checked + label::after {
-  border: 1px solid #336699;
-}
-
-/* exact reference calls per material design css */
-/* hack fix. needs fixin */
-input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]) {
-  border-bottom: 1px solid #336699;
-  box-shadow: 0 1px 0 0 #336699;
-}
-
-textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #336699;
-  box-shadow: 0 1px 0 0 #336699;
-}
-
-/* hack fix. needs fixin */
-input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label {
-  color: #336699;
-}
-
-textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #336699;
-}
-
-/*****************************************
 	General
 *****************************************/
-/* .load-animate-container {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-} */
 
-.load-logo {
-  width: 10vw;
-  height: 10vw;
+.loading-logo {
+  flex: 1 1 auto;
+  width: calc(25% + (28 - 25) * ((100vw - 320px) / (1600 - 320)));
+  height: calc(25% + (28 - 25) * ((100vw - 320px) / (1600 - 320)));
   border-radius: .5rem;
 }
 
@@ -525,10 +450,6 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   margin-right: 1em;
 }
 
-/* .aboutme-setup {
-  margin-bottom: 0;
-} */
-
 .aboutme {
   overflow: hidden;
   /* tricksies */
@@ -550,63 +471,18 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   display: block;
 }
 
-.background-words {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-}
-
-.background-words li {
-  animation-name: marquee;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-100%, 0);
-  }
-}
-
-.beer-call {
-  display: flex;
-  background: url("assets/images/porter.png") no-repeat;
-  background-size: contain;
-  background-position: 50% 50%;
-  height: 30vh;
-  text-align: center;
-}
-.beer-call p {
-  width: 100%;
-  text-align: center;
-  font-variant: small-caps;
-  font-size: 3em;
-  font-weight: 700;
-  color: #FF6600;
-  text-shadow: 0px 2px 0px #FAFAFA, 0px 3px 0px #FF6600;
-  line-height: 1;
-}
 
 label.prompter {
-  color: #336699;
+  color: var(--weo3-blue);
 }
 
 .input-field .error {
-  color: #FF6600;
-  margin-top: -20px;
-  /* to offset material design for now */
+  color: var(--weo3-highlight);
 }
 
 .help-block {
   position: absolute;
   color: #900;
-  bottom: 0;
 }
 
 nouislider {
@@ -615,7 +491,7 @@ nouislider {
 }
 
 .noUi-connect {
-  background: #84A4BF;
+  background: var(--weo3-light-blue);
 }
 
 .thanks {
@@ -627,15 +503,19 @@ nouislider {
   font-family: cursive;
 }
 
+.experience {
+  grid-column: 2;
+}
+
 .experience li {
   margin-bottom: 3em;
 }
 
 .year > p {
   font-size: 2.25em;
-  color: #84A4BF;
+  color: var(--weo3-light-blue);
   font-weight: 700;
-  border-bottom: 2px solid #84A4BF;
+  border-bottom: 2px solid var(--weo3-light-blue);
   font-style: italic;
   margin-bottom: 0.25em;
   line-height: 0.7;
@@ -654,7 +534,7 @@ nouislider {
   margin-bottom: 5em;
 }
 
-.color-default          { background: #84A4BF; }
+.color-default          { background: var(--weo3-light-blue); }
 
 .color-coffeescript     { background: #2d4576; }
 .color-css              { background: #56397c; }
@@ -679,25 +559,9 @@ nouislider {
   background: linear-gradient(to right bottom, #b52e31 45%, #fff 0, #fff 1%, #21759b 45%, #21759b 0);
 }
 
-.scale-up-center {
-	animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both;
+.element-pulse {
+	animation: ePulse 1s cubic-bezier(0.4, 0.575, 0.6, 1.0) infinite alternate both;
 }
-
-.background-beer {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 5rem;
-  overflow: hidden;
-  
-}
-
-  .background-beer > img {
-    height: 100%;
-    width: auto;
-  }
 
 
 .fade-in-manual {
@@ -730,22 +594,12 @@ nouislider {
   }
 }
 
-/* ----------------------------------------------
- * Generated by Animista on 2019-2-27 20:42:19
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation scale-up-center
- * ----------------------------------------
- */
- @keyframes scale-up-center {
+ @keyframes ePulse {
   0% {
     transform: scale(0.5);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.25);
   }
 }
 
@@ -787,24 +641,16 @@ nouislider {
 }
 /* above 900px */
 @media only screen and (min-width: 56.25em) {
-  /* header {
-    display: none;
-  } */
 
   nav {
     justify-content: initial;
     align-content: flex-start;
-    background: #336699;
-    box-shadow: 0 0 3px #336699;
+    background: var(--weo3-blue);
+    box-shadow: 0 0 3px var(--weo3-blue);
     top: 0;
-    color: #FAFAFA;
+    color: var(--weo3-white);
   }
-  /* nav img {
-    display: block;
-    height: 2.5em;
-    width: 2.5em;
-    margin: .25em 1em .25em .25em;
-  } */
+
   nav button {
     flex: auto 0;
     background: transparent;
@@ -820,7 +666,7 @@ nouislider {
   }
   nav button.active {
     background: transparent;
-    box-shadow: inset 0 -4px 0 #FAFAFA;
+    box-shadow: inset 0 -4px 0 var(--weo3-white);
   }
   nav button.active:hover {
     cursor: default;
@@ -840,9 +686,6 @@ nouislider {
     width: 90vw;
   }
 
-  .project-list {
-    /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
-  }
 
   blockquote {
     font-family: "Playfair Display", Times, "Times New Roman", serif;
@@ -855,12 +698,12 @@ nouislider {
     text-align: center;
     margin-left: 0em;
     padding: 0;
-    color: #336699;
+    color: var(--weo3-blue);
     border: none;
     margin-bottom: 0.8em;
   }
   blockquote a {
-    color: #336699;
+    color: var(--weo3-blue);
     border: none;
   }
   blockquote:first-of-type {
@@ -879,15 +722,3 @@ nouislider {
     padding-right: 15%;
   }
 }
-/* 1200px */
-/* @media only screen and (min-width: 75em) {
-  section {
-    width: 70vw;
-  }
-} */
-/* 1800px */
-/* @media only screen and (min-width: 130em) {
-  section {
-    width: 60vw;
-  }
-} */
