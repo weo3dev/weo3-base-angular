@@ -581,21 +581,21 @@ h1 {
 }
 
 nav {
-  align-self: stretch;
-  justify-content: initial;
   align-content: flex-start;
   background: transparent;
   box-shadow: unset;
   color: var(--weo3-white);
-  position: relative;
+  /* position: relative; */
   margin: 0;
-  margin-left: 1em;
+  margin-left: 3.5em;
   width: auto;
-  height: auto;
+  height: var(--header-height);
   top: unset;
+  justify-content: flex-start;
 }
 
 nav button {
+  flex: unset;
   display: flex;
   align-items: flex-end;
   background: transparent;
