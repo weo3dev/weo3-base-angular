@@ -1,3 +1,4 @@
+<main>
 <section id="contact">
 
   <form novalidate [formGroup]="client" (ngSubmit)="connectMe()">
@@ -6,7 +7,10 @@
 
       <h3>Let’s work together</h3>
 
-      <p>I am always open to hearing about new opportunties to make good things happen! Use this form to let me know of your needs and how I could possibly help.</p>
+      <p>I am always open to hearing about new opportunties to make good things happen!</p>
+      <p>Best way to contact me is to use electronic mail to 'dev' at my domain name (the one you are viewing now) dot com.</p>
+
+<!--
 
       <fieldset>
         <legend>About you</legend>
@@ -23,7 +27,7 @@
           </div>
         </label>
 
-<!--         
+        
         <div class="input-field" >
           <input type="text" id="fullname" formControlName="fullname">
           <label for="fullname">Full Name</label>
@@ -33,11 +37,11 @@
           <div class="error" *ngIf="client.get('fullname').hasError('minlength') && client.get('fullname').touched">
             Name must be a minimum of 2 letters in length.
           </div>
-        </div> -->
+        </div> 
 
 
 
-        <!-- <div class="input-field">
+         <div class="input-field">
           <input type="text" id="email" formControlName="email">
           <label for="email">Email</label>
           <div class="error" *ngIf="client.get('email').hasError('required') && client.get('email').touched">
@@ -48,7 +52,7 @@
         <div class="input-field">
               <input type="text" id="website" formControlName="website">
               <label for="website">Website (when applicable)</label>
-        </div> -->
+        </div>
 
 
         </fieldset>
@@ -77,27 +81,27 @@
           </div>
       </fieldset>
 
-<!-- 			<fieldset>
+ 			<fieldset>
         <legend>Project begin date</legend>
         <label class="prompter">When do you need to start?</label>
         <nouislider id="slider_startdate" class="noUi-extended" [min]="0" [max]="5" [step]="1" formControlName="startdate"></nouislider>
         <nouislider id="slider_startdate" class="noUi-extended"></nouislider>
-      </fieldset>		 -->
+      </fieldset>		 
 
-<!--
+
       <fieldset>
         <legend>Project begin date</legend>
         <label class="prompter">When do you need to start?</label>
-        <!-- <nouislider class="noUi-extended" [min]="0" [max]="5" [step]="1" ></nouislider> -->
+         <nouislider class="noUi-extended" [min]="0" [max]="5" [step]="1" ></nouislider> 
 
-  <!-- <nouislider [min]="0" [max]="6" [step]="0.5" [(ngModel)]="startMessage" [formControl]="connectForm.controls.startdate"></nouislider>
+   <nouislider [min]="0" [max]="6" [step]="0.5" [(ngModel)]="startMessage" [formControl]="connectForm.controls.startdate"></nouislider>
 
-        <!-- <nouislider [connect]="true" [min]="0" [max]="15" [(ngModel)]="someRange"></nouislider> -->
+         <nouislider [connect]="true" [min]="0" [max]="15" [(ngModel)]="someRange"></nouislider> 
 
 
-        <!-- <nouislider class="noUi-extended" [min]="0" [max]="5" [step]="1" [formControl]="connectForm.controls.startdate"></nouislider> -->
+         <nouislider class="noUi-extended" [min]="0" [max]="5" [step]="1" [formControl]="connectForm.controls.startdate"></nouislider> 
 
-<!--				<p>{{ startMessage }}</p>
+				<p>{{ startMessage }}</p>
       </fieldset>
 
       <fieldset class="timeframe">
@@ -113,7 +117,7 @@
         <p>{{ budgetMessage }}</p>
       </fieldset>
 
-      -->
+      
 
       <fieldset>
         <legend>Your project purpose/audience</legend>
@@ -148,6 +152,7 @@
       <button class="btn-flat" type="submit" [disabled]="client.invalid">Submit
         <i class="material-icons right">send</i>
       </button>
+    -->
 
     </ng-container>
 
@@ -158,5 +163,7 @@
 
   </form>
 
+
 </section>
 
+</main>

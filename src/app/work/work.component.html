@@ -2,10 +2,14 @@
     ngFor [ card, card image, card title, card content(description), card content(skills), card action]
 -->
 
+<main>
+
 <section id="work">
 
 
-  <dl class="work-examples" [ngsRevealSet]="{reset:false, viewOffset: {top: 60}}" [ngsInterval]="75" [ngsSelector]="'.work-example'">
+  <!-- <dl class="work-examples" [ngsRevealSet]="{reset:false, viewOffset: {top: 60}}" [ngsInterval]="75" [ngsSelector]="'.work-example'"> -->
+
+    <dl class="work-examples">
 
         <div class="work-example" itemscope itemtype="http://schema.org/WebSite">
           <figure>
@@ -37,7 +41,7 @@
               <img src="assets/images/weo3-ss-lsav.jpg" alt="alternate">
           </figure>          
           <dt itemprop="name">Lakeshore Audiovisual</dt>
-          <dd itemprop="responsibilities">Lead and direct CSS styling and implementation. Debug plugin conflicts and deliver replacement solutions.</dd>
+          <dd itemprop="responsibilities">Lead and direct CSS styling and implementation. Debug plugins.</dd>
           <dd itemprop="technologies"><strong>Tech: </strong>WordPress, CSS, JavaScript, PHP</dd>
           <dd itemprop="url">
             <a href="http://www.lsav.tv" target="_blank">view site
@@ -192,3 +196,4 @@
 
 </section>
 
+</main>

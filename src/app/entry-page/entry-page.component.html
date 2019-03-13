@@ -1,12 +1,15 @@
-<section id="log-entry">
-  <div class="weo3-loading" *ngIf="!pagedata">
-    <img src="assets/images/weo3-loading.gif">
-    <p>retrieving log entry</p>
-  </div>
-  <div class="content-centered" *ngIf="pagedata">
-  <h2 [innerHTML]="pagedata.title.rendered"></h2>
-  <p class="entry-date">{{pagedata.date | date: 'mediumDate'}}</p>
-  <p class="entry-content" [innerHTML]="pagedata.content.rendered"></p>
-  <hr/>
-  </div>
-</section>
+<main>
+  
+  <section id="log-entry">
+      <div class="loading-layout" *ngIf="!pagedata">
+          <img class="loading-logo element-pulse" src="../../assets/images/icon-weo3.svg" />
+      </div>
+
+      <article *ngIf="pagedata">
+        <h2 [innerHTML]="pagedata.title.rendered"></h2>
+        <p class="entry-date">{{pagedata.date | date: 'mediumDate'}}</p>
+        <section class="entry-content" [innerHTML]="pagedata.content.rendered"></section>
+        <hr />
+      </article>
+  </section>
+</main>
