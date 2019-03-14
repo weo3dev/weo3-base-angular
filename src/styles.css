@@ -59,7 +59,7 @@ body {
 
 app-root {
   display: grid;
-  grid-template-rows: minmax(4rem, auto) 1fr;
+  grid-template-rows: minmax(var(--header-height), auto) 1fr;
   height: inherit;
   min-height: 100%;
 }
@@ -585,9 +585,8 @@ nav {
   background: transparent;
   box-shadow: unset;
   color: var(--weo3-white);
-  /* position: relative; */
   margin: 0;
-  margin-left: 3.5em;
+  margin-left: calc(var(--header-height) + 0.5em);
   width: auto;
   height: var(--header-height);
   top: unset;
