@@ -1,5 +1,5 @@
 /*****************************************
-* weo3 dev & design :: updated march 12, 2019
+* weo3 dev & design :: updated march 27, 2019
 * 
 * 1. Variables
 * 2. Global Elements
@@ -54,6 +54,8 @@ body {
   font-weight: normal;
   background: var(--weo3-white);
   font-family: 'Assistant', Arial, Helvetica, sans-serif;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;  
 }
 
 
@@ -68,7 +70,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
   height: var(--header-height);
   width: 100%;
   top: 0;
@@ -86,9 +88,11 @@ header figure {
 nav {
   display: flex;
   justify-content: space-around;
-  position: absolute;
+  position: fixed;
   z-index: 100;
-  top: calc(100vh - 3em);
+  /* top: calc(100vh - 3em); */
+  /* bottom: var(--header-height); */
+  bottom: 0;
   background: var(--primary-white);
   width: 100vw;
   height: 3em;
@@ -589,7 +593,8 @@ nav {
   margin-left: calc(var(--header-height) + 0.5em);
   width: auto;
   height: var(--header-height);
-  top: unset;
+  top: 0;
+  position: absolute;
   justify-content: flex-start;
 }
 

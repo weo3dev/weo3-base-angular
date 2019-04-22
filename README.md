@@ -1,7 +1,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/metavurt/weo3-base-angular/badge.svg?branch=master)](https://coveralls.io/github/metavurt/weo3-base-angular?branch=master)
 
 # WEO3 Development and Design
-### core build for [weo3.com](http://www.weo3.com)
+### core build for [weo3.com](https://www.weo3.com)
 
 - [Introduction](#introduction)
 - [Requirements](#requirements)
@@ -53,7 +53,7 @@ $ ncu -u
 ```
 
 ## Running
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `https://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### What is not included:
 + php mailer script
@@ -66,7 +66,7 @@ Run `ng build -prod` to build the project. The build artifacts will be stored in
 
 ## Running Tests
 Use `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-Use `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Use `ng e2e` to execute the end-to-end tests via [Protractor](https://www.protractortest.org/).
 
 (Before running the tests make sure you are serving the app via `ng serve`.)
 

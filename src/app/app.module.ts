@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconRegistry, MatIconModule } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -21,7 +20,6 @@ import { TextExcerptPipe } from './shared/pipes/text-excerpt.pipe';
 import { CategoryColorPipe } from './shared/pipes/category-color.pipe';
 import { NgsRevealModule } from 'ngx-scrollreveal';
 
-import { Title } from '@angular/platform-browser';
 
 const defaultTitle = 'WEO3 Development and Design :: Los Angeles';
 const logEntryTitle = 'WEO3 Dev & Design :: ';
@@ -54,7 +52,6 @@ const ROUTES = [
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
     NgsRevealModule,
     HttpModule,
     HttpClientModule,
@@ -65,6 +62,6 @@ const ROUTES = [
 })
 export class AppModule {
   constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {
-    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg')); //  whatever path you placed mdi.svg
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg'));
   }
  }

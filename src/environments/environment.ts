@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  apiURL: 'http://weo3.com/weo3wp/wp-json/wp/v2/',
+  apiURL: 'https://weo3.com/weo3wp/wp-json/wp/v2/',
 };
 
