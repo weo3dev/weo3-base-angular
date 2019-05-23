@@ -3,6 +3,11 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "core-js/es7/reflect": [
+          "node_modules/core-js/proposals/reflect-metadata"
+      ]
+    },    
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
