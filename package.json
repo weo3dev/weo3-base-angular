@@ -29,6 +29,7 @@
     "ngx-scrollreveal": "^3.0.0",
     "rxjs": "^6.3.3",
     "scrollreveal": "^4.0.5",
+    "tar": ">=4.4.2",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
@@ -48,6 +49,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
     "protractor": "~5.4.2",
+    "tar": ">=4.4.2",
     "ts-node": "~8.1.0",
     "tslint": "~5.16.0",
     "typescript": "^3.2.4"
