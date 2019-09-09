@@ -30,8 +30,8 @@ const ROUTES = [
   { path: 'about', component: AboutComponent, data: { pageTitle: defaultTitle + ' : About Me', pageHeader: 'About Me'} },
   { path: 'contact', component: ContactComponent, data: { pageTitle: defaultTitle + ' : Contact Me', pageHeader: 'Contact Me'} },
   { path: 'experience', component: ExperienceComponent, data: { pageTitle: defaultTitle + ' : Experience', pageHeader: 'Experience'} },
-  { path: 'log', component: LogComponent, data: { pageTitle: defaultTitle + ' : Logbook', pageHeader: 'Logbook'} },
-  { path: 'log/:slug', component: EntryPageComponent, data: { pageTitle: logEntryTitle + ' : Logbook', pageHeader: 'Logbook'} }
+  { path: 'log', component: LogComponent, data: { pageTitle: defaultTitle + ' : Thoughts', pageHeader: 'Thoughts'} },
+  { path: 'log/:slug', component: EntryPageComponent, data: { pageTitle: logEntryTitle + ' : Thoughts', pageHeader: 'Thoughts'} }
 ];
 
 @NgModule({

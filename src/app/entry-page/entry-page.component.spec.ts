@@ -1,24 +1,27 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed, async } from '@angular/core/testing';
 import { EntryPageComponent } from './entry-page.component';
 
 describe('EntryPageComponent', () => {
-  let component: EntryPageComponent;
-  let fixture: ComponentFixture<EntryPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ EntryPageComponent ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(EntryPageComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  describe(':', () => {
+
+    function setup() {
+      const fixture = TestBed.createComponent(EntryPageComponent);
+      const module = fixture.debugElement.componentInstance;
+      return { fixture, module };
+    }
+
+    // it('should create the module ', () => {
+    //   const { module } = setup();
+    //   expect(module).toBeTruthy();
+    // });
+
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });
