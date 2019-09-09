@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, throwError, of } from 'rxjs';
-import { Http } from '@angular/http';
-import { Resolve } from '@angular/router';
-import { map, catchError } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 export interface IMessage {
   name?: string;
@@ -13,7 +12,7 @@ export interface IMessage {
 @Injectable()
 export class AppService {
   private emailUrl = 'assets/php/connecting.php';
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   sendEmail(message: IMessage): Observable<IMessage> | any {
     return this.http.post(this.emailUrl, message),

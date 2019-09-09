@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconRegistry, MatIconModule } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -53,7 +52,6 @@ const ROUTES = [
     MatIconModule,
     ReactiveFormsModule,
     NgsRevealModule,
-    HttpModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES)
   ],
