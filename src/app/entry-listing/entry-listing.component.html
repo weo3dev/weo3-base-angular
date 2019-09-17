@@ -1,8 +1,7 @@
-<a class="entry-listing" [routerLink]="['/log', entry.slug]">
+<a class="entry-listing" [routerLink]="['/thoughts', entry.slug]">
   <div class="entry-container">
       <h3 class="entry-title"  [innerHTML]="entry.title.rendered"></h3>
       <p class="entry-date">{{entry.date | date: 'mediumDate'}}</p>
     <p class="entry-excerpt" [innerHTML]="entry.excerpt.rendered | TextExcerpt : 160"></p>
-    <!-- <a class="entry-link" [routerLink]="['/log', entry.slug]">continue reading </a> -->
   </div>
 </a>
