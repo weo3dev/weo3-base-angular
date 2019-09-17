@@ -43,7 +43,7 @@ const ROUTES = [
     WorkComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({appId: 'weo3-base-angular'}),
+    BrowserModule.withServerTransition({ appId: 'serverApp' }).withServerTransition({appId: 'weo3-base-angular'}),
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
