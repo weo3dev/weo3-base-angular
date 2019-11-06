@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'weo3-base-angular';
+
+  sectionHeader: string;
+
 }
