@@ -31,7 +31,9 @@
               "src/assets/fonts/material-icons/material-icons.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/vivus/dist/vivus.min.js"
+            ]
           },
           "configurations": {
             "production": {

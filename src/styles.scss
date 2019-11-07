@@ -60,7 +60,6 @@
     -webkit-overflow-scrolling: touch;
   }
   
-  
   app-root {
     display: grid;
     grid-template-rows: minmax(var(--header-height), auto) 1fr;
@@ -86,6 +85,44 @@
     height: 100%;
     padding: 0.5em;
   }
+
+  /* intro blip */
+  .weo3-logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;    
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #369;
+    opacity: 1;
+    transition-duration: 1.5s;
+    transform: scale(1);
+  }
+
+  .weo3-logo {
+      width: 50%;
+      height: 50%;
+  }
+
+  #weo3Logo {
+    transition-duration: 1s;
+  }
+
+  .weo3-logo-exit {
+    transform: scale(0.1);
+    opacity: 0;
+    transform-origin: center center;
+  }
+
+  .weo3-container-exit {
+      opacity: 0;
+      // transform: scale(0.1);
+      transform-origin: center center;
+  }  
   
   nav {
     display: flex;
