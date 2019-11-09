@@ -32,7 +32,8 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/vivus/dist/vivus.min.js"
+              "node_modules/vivus/dist/vivus.min.js",
+              "src/assets/js/mask.js"
             ]
           },
           "configurations": {

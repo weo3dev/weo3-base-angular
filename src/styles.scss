@@ -733,17 +733,17 @@
       display: none;
     }
   
-    nav .active {
-      background: var(--primary-white);
-      padding-bottom: 1rem;
-      margin-bottom: -1rem;
-      box-shadow: 1px 4px 21px rgba(51, 102, 153, 0.4);
-      padding: 0 1.5em 1.5em 1.5em;
-    }
+    // nav .active {
+    //   background: var(--primary-white);
+    //   padding-bottom: 1rem;
+    //   margin-bottom: -1rem;
+    //   box-shadow: 1px 4px 21px rgba(51, 102, 153, 0.4);
+    //   padding: 0 1.5em 1.5em 1.5em;
+    // }
   
-    nav .active .caption {
-      color: var(--weo3-highlight);
-    }
+    // nav .active .caption {
+    //   color: var(--weo3-highlight);
+    // }
   
     nav .active:hover {
       cursor: default;
@@ -755,6 +755,22 @@
       font-weight: 400;
       font-size: calc(1.5rem + (22 - 20) * ((100vw - 16.25rem) / (1600 - 260)));
     }
+
+    nav.layer-mask {
+      pointer-events: none;
+      height: calc(var(--header-height) + 20px);
+      box-shadow: 0px 0 20px -6px hsla(210, 50%, 40%, 0.5);
+      clip-path: inset(0px 362px -30px 0px);
+      background: var(--primary-white);
+    }
+
+    nav.layer-mask button {
+        padding-bottom: 20px;
+    }
+
+    nav.layer-mask .caption {
+        color: var(--weo3-highlight);
+    }    
   
     .work-example [itemprop=responsibilities] {
       min-height: 5rem;

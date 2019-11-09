@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import * as Vivus from 'vivus';
 import { longStackSupport } from 'q';
 
+declare const initNav: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -21,6 +23,8 @@ export class AppComponent implements OnInit {
       delay: 0,
       forceRender: true
     }, this.logoExitView);
+
+    initNav();
 
   }
 

@@ -37,35 +37,46 @@
       </svg>
 </div>
 
-<!-- md-button out for now -->
-<!-- <button md-button routerLink="/example" routerLinkAc....  -->
-  <nav>
-    <button routerLink="/work" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true }">
-      <!-- <mat-icon>apps</mat-icon> -->
-      <span class="material-icons">apps</span>
+<nav class="not-masked">
+  <button routerLink="/work" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true }">
+    <span class="material-icons">apps</span>
+    <div class="caption">work</div>
+  </button>
+  <button routerLink="/about" routerLinkActive="active">
+    <span class="material-icons">person</span>
+    <div class="caption">about</div>
+  </button>
+  <button routerLink="/contact" routerLinkActive="active">
+    <span class="material-icons">forum</span>
+    <div class="caption">contact</div>
+  </button>
+  <button routerLink="/experience" routerLinkActive="active">
+    <span class="material-icons">format_list_bulleted</span>
+    <div class="caption">experience</div>
+  </button>
+  <!-- <button md-button routerLink="/thoughts" routerLinkActive="active">
+    <! -- <mat-icon>subject</mat-icon> -- >
+    <span class="material-icons">subject</span>
+    <div class="caption">thoughts</div>
+  </button> -->
+</nav>
+
+<nav class="layer-mask">
+  <button>
       <div class="caption">work</div>
-    </button>
-    <button routerLink="/about" routerLinkActive="active">
-      <!-- <mat-icon>person</mat-icon> -->
-      <span class="material-icons">person</span>
+  </button>
+  <button>
       <div class="caption">about</div>
-    </button>
-    <button routerLink="/contact" routerLinkActive="active">
-      <!-- <mat-icon>forum</mat-icon> -->
-      <span class="material-icons">forum</span>
+  </button>
+  <button>
       <div class="caption">contact</div>
-    </button>
-    <button routerLink="/experience" routerLinkActive="active">
-      <!-- <mat-icon>format_list_bulleted</mat-icon> -->
-      <span class="material-icons">format_list_bulleted</span>
+  </button>
+  <button>
       <div class="caption">experience</div>
-    </button>
-    <!-- <button md-button routerLink="/thoughts" routerLinkActive="active">
-      <! -- <mat-icon>subject</mat-icon> -- >
-      <span class="material-icons">subject</span>
-      <div class="caption">thoughts</div>
-    </button> -->
-  </nav>
+  </button>
+</nav>
+
+
 
   
 
