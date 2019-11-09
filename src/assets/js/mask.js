@@ -1,5 +1,5 @@
 function initNav() {
-    if(window.innerWidth > 899) {
+    //if(window.innerWidth > 899) {
         
         window.addEventListener('resize', toggleTransitionTime);
 
@@ -39,5 +39,7 @@ function initNav() {
             navToMask.style.cssText = `clip-path: ${newCoords};`
         }
 
-    }
+    //}
+
+    applyNewClipPathCoords(currentButton);
 }

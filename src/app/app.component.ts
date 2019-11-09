@@ -18,10 +18,9 @@ export class AppComponent implements OnInit {
 
     const v = new Vivus('weo3Logo', {
       type: 'oneByOne',
-      duration: 200,
+      duration: 150,
       start: 'autostart',
-      delay: 0,
-      forceRender: true
+      pathTimingFunction: Vivus.EASE_IN,
     }, this.logoExitView);
 
     initNav();
@@ -32,15 +31,17 @@ export class AppComponent implements OnInit {
     const logo = document.querySelector('#weo3Logo');
     const bg = document.querySelector('.weo3-logo-container');
 
-    logo.classList.add('weo3-logo-exit');
+    setTimeout(() => {
+      logo.classList.add('weo3-logo-exit');
+    }, 100);
 
     setTimeout(() => {
       bg.classList.add('weo3-container-exit');
-   }, 1500);
+   }, 1000);
 
     setTimeout(() => {
-     bg.parentNode.removeChild(bg);
-   }, 2000);
+      bg.parentNode.removeChild(bg);
+   }, 2500);
   }
 
 
